@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="Style2.css">
+</head>
+<body>
+  <script>
+    function celsiusToFahrenheit(celsius) {
+  var fahrenheit = (celsius * 9/5) + 32;
+  return fahrenheit;
+}
+
+function convertTemperature() {
+  var suhuCelsius = parseFloat(document.getElementById("celsius").value);
+  var suhuFahrenheit = celsiusToFahrenheit(suhuCelsius);
+  document.getElementById("result").textContent = suhuCelsius + " derajat Celsius sama dengan " + suhuFahrenheit + " derajat Fahrenheit.";
+}
+  </script>
+  <div class="container">
+    <h1>Konversi Suhu</h1>
+    <label for="celsius">Masukkan suhu dalam Celsius:</label>
+    <input type="number" id="celsius" placeholder="Masukkan suhu" required>
+    <button onclick="convertTemperature()">Konversi</button>
+    <p id="result"></p>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
