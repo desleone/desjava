@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Daftar Siswa</title>
+</head>
+<script>
+  // Array yang berisi objek-objek siswa
+var siswa = [
+  { id: 1, nama: "Alice", umur: 16, kelas: "XII-A" },
+  { id: 2, nama: "Bob", umur: 17, kelas: "XII-B" },
+  { id: 3, nama: "Charlie", umur: 16, kelas: "XII-A" }
+];
+
+// Fungsi untuk menambahkan siswa ke daftar di HTML
+function tambahSiswaKeDaftar(siswa) {
+  var daftarSiswa = document.getElementById("daftar-siswa");
+  var li = document.createElement("li");
+  li.textContent = "ID: " + siswa.id + ", Nama: " + siswa.nama + ", Umur: " + siswa.umur + ", Kelas: " + siswa.kelas;
+  daftarSiswa.appendChild(li);
+}
+
+// Menambahkan setiap siswa ke daftar
+siswa.forEach(function(s) {
+  tambahSiswaKeDaftar(s);
+});
+</script>
+<body>
+  <h1>Daftar Siswa</h1>
+  <ul id="daftar-siswa">
+  </ul>
+</body>
+</html>
