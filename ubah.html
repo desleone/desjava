@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ubah Warna dengan JavaScript</title>
+</head>
+<body>
+    <div id="elemen" style="width: 200px; height: 200px; background-color: lightblue;">
+        Ini adalah elemen dengan warna yang dapat diubah.
+    </div>
+
+    <button onclick="ubahWarnaTeks()">Ubah Warna Teks</button>
+    <button onclick="ubahWarnaLatarBelakang()">Ubah Warna Latar Belakang</button>
+
+    <script>
+        function ubahWarnaTeks() {
+            var elemen = document.getElementById('elemen');
+            elemen.style.color = 'red'; // Ganti warna teks menjadi merah
+        }
+
+        function ubahWarnaLatarBelakang() {
+            var elemen = document.getElementById('elemen');
+            elemen.style.backgroundColor = 'yellow'; // Ganti warna latar belakang menjadi kuning
+        }
+    </script>
+</body>
+</html>
